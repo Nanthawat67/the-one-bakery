@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+ข้อมูลการสั่งซื้อ - THE ONE Bakery
+</title>
+
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+<h1>
+🍞 THE ONE Bakery
+</h1>
+
+<p>
+กรอกข้อมูลเพื่อยืนยันคำสั่งซื้อ
+</p>
+
+</header>
+
+
+
+
+<main>
+
+
+<section class="checkout-box">
+
+
+<h2>
+ข้อมูลผู้สั่งซื้อ
+</h2>
+
+
+
+<label>
+ชื่อผู้สั่งซื้อ
+</label>
+
+<input 
+id="name"
+type="text"
+placeholder="กรอกชื่อของคุณ">
+
+
+
+<label>
+เบอร์โทรศัพท์
+</label>
+
+<input 
+id="phone"
+type="text"
+placeholder="กรอกเบอร์โทรศัพท์">
+
+
+
+
+
+<h2>
+วิธีรับสินค้า
+</h2>
+
+
+
+<div class="delivery-option">
+
+
+<label>
+
+<input 
+type="radio"
+name="delivery"
+value="pickup"
+checked
+onclick="toggleAddress()">
+
+🏠 รับที่ร้าน
+
+</label>
+
+
+
+<label>
+
+<input 
+type="radio"
+name="delivery"
+value="delivery"
+onclick="toggleAddress()">
+
+🚚 ส่งถึงบ้าน
+
+</label>
+
+
+</div>
+
+
+
+
+
+<div id="addressBox"
+class="address-box"
+style="display:none;">
+
+
+<label>
+ที่อยู่จัดส่ง
+</label>
+
+
+<textarea
+id="address"
+placeholder="กรอกที่อยู่สำหรับจัดส่ง">
+</textarea>
+
+
+</div>
+
+
+
+
+<button 
+onclick="submitOrder()">
+
+✅ ยืนยันการสั่งซื้อ
+
+</button>
+
+
+
+</section>
+
+
+
+</main>
+
+
+
+<footer>
+
+<p>
+© THE ONE Bakery
+</p>
+
+</footer>
+
+
+
+
+<script src="js/checkout.js"></script>
+
+
+</body>
+
+</html>
