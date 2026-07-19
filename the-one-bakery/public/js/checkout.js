@@ -1,25 +1,3 @@
-function toggleAddress(){
-
-    const type =
-    document.querySelector(
-        'input[name="delivery"]:checked'
-    ).value;
-
-
-    const box =
-    document.getElementById('addressBox');
-
-
-    if(type === 'delivery'){
-        box.style.display = 'block';
-    }
-    else{
-        box.style.display = 'none';
-    }
-
-}
-
-
 async function submitOrder(){
 
     const name =
@@ -30,14 +8,10 @@ async function submitOrder(){
     document.getElementById('phone').value;
 
 
-    const delivery =
-    document.querySelector(
-        'input[name="delivery"]:checked'
-    ).value;
+    const delivery = "pickup";  
 
 
-    const address =
-    document.getElementById('address').value;
+    const address = "";
 
 
     const cart =
@@ -58,8 +32,7 @@ async function submitOrder(){
 
         phone: phone,
 
-        delivery_type: delivery,
-
+        delivery_type: "pickup",
         address: address,
 
         total_price: total,

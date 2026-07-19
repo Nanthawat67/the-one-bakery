@@ -4,14 +4,10 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>
 ข้อมูลการสั่งซื้อ - THE ONE Bakery
 </title>
-
-
 <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -19,34 +15,20 @@
 
 <body>
 
-
 <header class="header">
-
 <h1>
 🍞 THE ONE Bakery
 </h1>
-
 <p>
 กรอกข้อมูลเพื่อยืนยันคำสั่งซื้อ
 </p>
-
 </header>
 
-
-
-
 <main>
-
-
 <section class="checkout-box">
-
-
 <h2>
 ข้อมูลผู้สั่งซื้อ
 </h2>
-
-
-
 <label>
 ชื่อผู้สั่งซื้อ
 </label>
@@ -55,8 +37,6 @@
 id="name"
 type="text"
 placeholder="กรอกชื่อของคุณ">
-
-
 
 <label>
 เบอร์โทรศัพท์
@@ -67,52 +47,13 @@ id="phone"
 type="text"
 placeholder="กรอกเบอร์โทรศัพท์">
 
+<h3 style="color:#8B4513;">
+📍 รับสินค้าที่ร้านเท่านั้น
+</h3>
 
-
-
-
-<h2>
-วิธีรับสินค้า
-</h2>
-
-
-
-<div class="delivery-option">
-
-
-<label>
-
-<input 
-type="radio"
-name="delivery"
-value="pickup"
-checked
-onclick="toggleAddress()">
-
-🏠 รับที่ร้าน
-
-</label>
-
-
-
-<label>
-
-<input 
-type="radio"
-name="delivery"
-value="delivery"
-onclick="toggleAddress()">
-
-🚚 ส่งถึงบ้าน
-
-</label>
-
-
-</div>
-
-
-
-
+<p style="color:gray;">
+เมื่อสั่งซื้อสำเร็จ กรุณามารับสินค้าที่ร้าน THE ONE Bakery
+</p>
 
 <div id="addressBox"
 class="address-box"
@@ -123,17 +64,12 @@ style="display:none;">
 ที่อยู่จัดส่ง
 </label>
 
-
 <textarea
 id="address"
 placeholder="กรอกที่อยู่สำหรับจัดส่ง">
 </textarea>
 
-
 </div>
-
-
-
 
 <button 
 onclick="submitOrder()">
@@ -142,15 +78,9 @@ onclick="submitOrder()">
 
 </button>
 
-
-
 </section>
 
-
-
 </main>
-
-
 
 <footer>
 
@@ -160,11 +90,7 @@ onclick="submitOrder()">
 
 </footer>
 
-
-
-
 <script src="js/checkout.js"></script>
-
 
 </body>
 

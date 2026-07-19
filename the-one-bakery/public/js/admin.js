@@ -15,6 +15,42 @@ async function loadOrders(){
 
     document.getElementById('totalSales').innerText = `${sales} บาท`;
 
+    // คำนวณจำนวนสินค้าที่ขายทั้งหมด
+    let totalItems = 0;
+
+    orders.forEach(order => {
+        order.items.forEach(item => {
+            totalItems += item.quantity;
+        });
+    });
+
+    document.getElementById('totalItems').innerText = totalItems;
+
+    // หาสินค้าขายดีที่สุด
+    let productCount = {};
+
+    orders.forEach(order => {
+        order.items.forEach(item => {
+            if (!productCount[item.name]) {
+                productCount[item.name] = 0;
+            }
+
+            productCount[item.name] += item.quantity;
+        });
+    });
+
+    let best = "-";
+    let max = 0;
+
+    for (let p in productCount) {
+        if (productCount[p] > max) {
+            max = productCount[p];
+            best = p;
+        }
+    }
+
+    document.getElementById('bestProduct').innerText = best;
+
     const table = document.getElementById('orders');
 
     table.innerHTML = "";
