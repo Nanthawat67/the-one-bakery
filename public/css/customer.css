@@ -1,0 +1,449 @@
+/* ===========================================================
+   THE ONE Bakery
+   Customer Page
+=========================================================== */
+
+/* ---------- Header ---------- */
+
+.customer-header{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.customer-header .logo{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.customer-header .logo img{
+
+    width:150px;
+
+    height:150px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:5px solid #8D6E63;
+
+    background:white;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.15);
+
+}
+
+.customer-header h1{
+
+    font-size:42px;
+
+    color:#5D4037;
+
+    margin-bottom:10px;
+
+}
+
+.customer-header p{
+
+    color:#777;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+/* ---------- Section ---------- */
+
+.section-title{
+
+    margin-bottom:20px;
+
+    color:#5D4037;
+
+    font-size:28px;
+
+}
+
+/* ---------- Search ---------- */
+
+.search-section{
+
+    margin-bottom:35px;
+
+}
+
+.search-section input{
+
+    width:100%;
+
+    padding:15px 20px;
+
+    font-size:17px;
+
+    border:2px solid #D7CCC8;
+
+    border-radius:40px;
+
+    outline:none;
+
+    transition:.25s;
+
+    background:white;
+
+}
+
+.search-section input:focus{
+
+    border-color:#8D6E63;
+
+    box-shadow:0 0 10px rgba(141,110,99,.25);
+
+}
+
+/* ---------- Product Grid ---------- */
+
+.products{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(270px,1fr));
+
+    gap:25px;
+
+}
+
+/* ---------- Product Card ---------- */
+
+.product-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.25s;
+
+}
+
+.product-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 12px 28px rgba(0,0,0,.12);
+
+}
+
+/* ---------- Product Image ---------- */
+
+.product-card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:contain;
+
+    background:#FFF8F2;
+
+    padding:15px;
+
+}
+
+/* ---------- Product Info ---------- */
+
+.product-info{
+
+    padding:20px;
+
+}
+
+.product-info h3{
+
+    font-size:22px;
+
+    color:#5D4037;
+
+    margin-bottom:12px;
+
+}
+
+.price{
+
+    font-size:26px;
+
+    font-weight:bold;
+
+    color:#D84315;
+
+    margin-bottom:20px;
+
+}
+
+/* ---------- Quantity ---------- */
+
+.quantity-control{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.quantity-control button{
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#8D6E63;
+
+    color:white;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    line-height:1;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.quantity-control button:hover{
+
+    background:#6D4C41;
+
+    transform:scale(1.08);
+
+}
+
+.quantity-control input{
+
+    width:70px;
+
+    height:42px;
+
+    text-align:center;
+
+    border:2px solid #D7CCC8;
+
+    border-radius:10px;
+
+    background:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    outline:none;
+
+}
+
+/* ---------- Hide Number Arrow ---------- */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+
+    -webkit-appearance:none;
+
+    margin:0;
+
+}
+
+input[type="number"]{
+
+    appearance:textfield;
+
+    -moz-appearance:textfield;
+
+}
+
+/* ---------- Add Button ---------- */
+
+.add-btn{
+
+    width:100%;
+
+    margin-top:18px;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#6D4C41;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.add-btn:hover{
+
+    background:#4E342E;
+
+}
+
+/* ---------- Floating Cart ---------- */
+
+.cart-button{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    border:none;
+
+    border-radius:50px;
+
+    padding:16px 24px;
+
+    background:#6D4C41;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.25);
+
+    transition:.25s;
+
+    z-index:999;
+
+}
+
+.cart-button:hover{
+
+    background:#4E342E;
+
+    transform:translateY(-3px);
+
+}
+
+#cartCount{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-width:24px;
+
+    height:24px;
+
+    padding:0 7px;
+
+    border-radius:50px;
+
+    background:#FF7043;
+
+    color:white;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+}
+
+/* ---------- Empty ---------- */
+
+.products h2{
+
+    grid-column:1/-1;
+
+    text-align:center;
+
+    color:#999;
+
+    margin-top:60px;
+
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:768px){
+
+    .customer-header .logo img{
+
+        width:120px;
+
+        height:120px;
+
+    }
+
+    .customer-header h1{
+
+        font-size:34px;
+
+    }
+
+    .products{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .cart-button{
+
+        left:15px;
+
+        right:15px;
+
+        bottom:15px;
+
+        justify-content:center;
+
+    }
+
+}

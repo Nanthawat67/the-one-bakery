@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | THE ONE Bakery</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <img
+                src="images/logo.png"
+                alt="THE ONE Bakery">
+
+        </div>
+
+        <h2>
+
+            THE ONE Bakery
+
+        </h2>
+
+        <nav>
+
+            <a
+                href="admin.html">
+
+                📋 ออเดอร์ทั้งหมด
+
+            </a>
+
+            <a
+                href="dashboard.html"
+                class="active">
+
+                📊 Dashboard
+
+            </a>
+
+            <a
+                href="kitchen.html">
+
+                👨‍🍳 Kitchen
+
+            </a>
+
+            <a
+                href="packing.html">
+
+                📦 Packing
+
+            </a>
+
+            <a href="products.html">
+                🍞 จัดการสินค้า
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="content">
+
+        <header class="page-header">
+
+            <h1>
+
+                Dashboard
+
+            </h1>
+
+            <p>
+
+                ภาพรวมการดำเนินงานของร้านในวันนี้
+
+            </p>
+
+        </header>
+
+        <!-- Summary Cards -->
+
+        <section class="dashboard-grid">
+
+            <div class="card">
+
+                <h3>
+
+                    💰 รายได้วันนี้
+
+                </h3>
+
+                <div
+                    id="salesToday"
+                    class="value">
+
+                    ฿0.00
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <h3>
+
+                    🧾 ออเดอร์วันนี้
+
+                </h3>
+
+                <div
+                    id="ordersToday"
+                    class="value">
+
+                    0
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <h3>
+
+                    👨‍🍳 รอผลิต
+
+                </h3>
+
+                <div
+                    id="waitingProduction"
+                    class="value">
+
+                    0
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <h3>
+
+                    📦 รอแพ็ก
+
+                </h3>
+
+                <div
+                    id="waitingPacking"
+                    class="value">
+
+                    0
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <h3>
+
+                    ✅ เสร็จแล้ว
+
+                </h3>
+
+                <div
+                    id="completed"
+                    class="value">
+
+                    0
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <h3>
+
+                    🏆 สินค้าขายดีที่สุด
+
+                </h3>
+
+                <div
+                    id="bestSeller"
+                    class="value">
+
+                    -
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Top Products -->
+
+        <section class="top-products">
+
+            <h2>
+
+                สินค้าขายดี
+
+            </h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+
+                            สินค้า
+
+                        </th>
+
+                        <th>
+
+                            จำนวนที่ขาย
+
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="topProducts">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

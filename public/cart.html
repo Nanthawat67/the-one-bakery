@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>ตะกร้าสินค้า | THE ONE Bakery</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/cart.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+
+    <header class="page-header">
+
+        <h1>
+
+            🛒 ตะกร้าสินค้า
+
+        </h1>
+
+        <p>
+
+            ตรวจสอบรายการสินค้าก่อนดำเนินการสั่งซื้อ
+
+        </p>
+
+    </header>
+
+    <!-- Cart List -->
+
+    <div
+        id="cartItems"
+        class="cart-items">
+
+    </div>
+
+    <!-- Summary -->
+
+    <div class="summary">
+
+        <h2>
+
+            รวมทั้งหมด
+
+        </h2>
+
+        <h1 id="totalPrice">
+
+            ฿0.00
+
+        </h1>
+
+    </div>
+
+    <!-- Buttons -->
+
+    <div class="cart-actions">
+
+        <button
+            class="btn secondary"
+            onclick="goBack()">
+
+            ← เลือกสินค้าต่อ
+
+        </button>
+
+        <button
+            class="btn danger"
+            onclick="clearCart()">
+
+            🗑 ล้างตะกร้า
+
+        </button>
+
+        <button
+            class="btn"
+            onclick="checkout()">
+
+            ดำเนินการสั่งซื้อ →
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="js/cart.js"></script>
+
+</body>
+
+</html>

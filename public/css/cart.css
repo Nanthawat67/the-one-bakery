@@ -1,0 +1,445 @@
+/* ===========================================================
+   THE ONE Bakery
+   Cart Page
+=========================================================== */
+
+/* ---------- Header ---------- */
+
+.customer-header{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.customer-header .logo{
+
+    margin-bottom:15px;
+
+}
+
+.customer-header .logo img{
+
+    width:140px;
+
+    height:auto;
+
+}
+
+.customer-header h1{
+
+    font-size:40px;
+
+    color:#5D4037;
+
+    margin-bottom:10px;
+
+}
+
+.customer-header p{
+
+    color:#777;
+
+    font-size:17px;
+
+}
+
+/* ---------- Cart ---------- */
+
+.cart-items{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+/* ---------- Card ---------- */
+
+.cart-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    position:relative;
+
+}
+
+.cart-card img{
+
+    width:130px;
+
+    height:130px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    background:#f5f5f5;
+
+}
+
+/* ---------- Info ---------- */
+
+.cart-info{
+
+    flex:1;
+
+}
+
+.cart-info h3{
+
+    color:#5D4037;
+
+    margin-bottom:12px;
+
+    font-size:24px;
+
+}
+
+.cart-info p{
+
+    margin-bottom:15px;
+
+    color:#666;
+
+}
+
+.cart-info h4{
+
+    color:#D84315;
+
+    font-size:22px;
+
+    margin-top:15px;
+
+}
+
+/* ---------- Quantity ---------- */
+
+.quantity-control{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.quantity-control button{
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#8D6E63;
+
+    color:white;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    line-height:1;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+    flex-shrink:0;
+
+}
+
+.quantity-control button:hover{
+
+    background:#6D4C41;
+
+    transform:scale(1.08);
+
+}
+
+.quantity-control input{
+
+    width:70px;
+
+    height:42px;
+
+    text-align:center;
+
+    border:2px solid #D7CCC8;
+
+    border-radius:10px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    line-height:42px;
+
+    outline:none;
+
+}
+
+/* ---------- Hide Number Arrow ---------- */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+
+    -webkit-appearance:none;
+
+    margin:0;
+
+}
+
+input[type="number"]{
+
+    appearance:textfield;
+
+    -moz-appearance:textfield;
+
+}
+
+/* ---------- Delete ---------- */
+
+.delete-btn{
+
+    position:absolute;
+
+    top:15px;
+
+    right:15px;
+
+    width:36px;
+
+    height:36px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#EF5350;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    line-height:1;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.delete-btn:hover{
+
+    background:#D32F2F;
+
+}
+
+/* ---------- Summary ---------- */
+
+.summary{
+
+    margin-top:35px;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.summary h2{
+
+    color:#666;
+
+    margin-bottom:12px;
+
+}
+
+.summary h1{
+
+    color:#D84315;
+
+    font-size:38px;
+
+}
+
+/* ---------- Buttons ---------- */
+
+.cart-actions{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin-top:30px;
+
+}
+
+.btn{
+
+    flex:1;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#6D4C41;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.btn:hover{
+
+    background:#4E342E;
+
+}
+
+.btn.secondary{
+
+    background:#9E9E9E;
+
+}
+
+.btn.secondary:hover{
+
+    background:#757575;
+
+}
+
+.btn.danger{
+
+    background:#E53935;
+
+}
+
+.btn.danger:hover{
+
+    background:#C62828;
+
+}
+
+/* ---------- Empty ---------- */
+
+.empty-cart{
+
+    text-align:center;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:60px 20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.empty-cart h2{
+
+    color:#777;
+
+    margin-bottom:25px;
+
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:768px){
+
+    .customer-header .logo img{
+
+        width:110px;
+
+    }
+
+    .cart-card{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .cart-card img{
+
+        width:180px;
+
+        height:180px;
+
+    }ถ
+
+    .quantity-control{
+
+        justify-content:center;
+
+    }
+
+    .cart-actions{
+
+        flex-direction:column;
+
+    }
+
+}
+
+.delete-btn:hover{
+
+    background:#C62828;
+
+    transform:scale(1.08);
+
+}

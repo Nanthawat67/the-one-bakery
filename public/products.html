@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>จัดการสินค้า | THE ONE Bakery</title>
+
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/products.css">
+
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css">
+
+</head>
+
+
+<body>
+
+
+<div class="layout">
+
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+
+        <div class="logo">
+
+            <img src="images/logo.png"
+                alt="THE ONE Bakery">
+
+        </div>
+
+
+        <h2>
+            THE ONE Bakery
+        </h2>
+
+
+        <nav>
+
+
+            <a href="admin.html">
+                📋 ออเดอร์
+            </a>
+
+
+            <a href="dashboard.html">
+                📊 Dashboard
+            </a>
+
+
+            <a href="kitchen.html">
+                👨‍🍳 Kitchen
+            </a>
+
+
+            <a href="packing.html">
+                📦 Packing
+            </a>
+
+
+            <a href="products.html"
+                class="active">
+
+                🍞 จัดการสินค้า
+
+            </a>
+
+
+        </nav>
+
+
+    </aside>
+
+
+
+
+
+    <!-- Main -->
+
+    <main class="content">
+
+
+        <header class="page-header">
+
+
+            <h1>
+                🍞 จัดการสินค้า
+            </h1>
+
+
+            <p>
+                เพิ่ม แก้ไข ลบ และจัดการสินค้าทั้งหมด
+            </p>
+
+
+        </header>
+
+
+
+
+
+        <!-- Toolbar -->
+
+
+        <div class="toolbar">
+
+
+            <input
+                type="text"
+                id="search"
+                placeholder="🔍 ค้นหาสินค้า...">
+
+
+            <button
+                class="add-btn"
+                onclick="openAddModal()">
+
+                ➕ เพิ่มสินค้า
+
+            </button>
+
+
+        </div>
+
+
+
+
+
+        <!-- Product Table -->
+
+
+        <div class="table-box">
+
+
+            <table>
+
+
+                <thead>
+
+
+                    <tr>
+
+
+                        <th width="90">
+                            รูป
+                        </th>
+
+
+                        <th>
+                            ชื่อสินค้า
+                        </th>
+
+
+                        <th width="120">
+                            ราคา
+                        </th>
+
+
+                        <th width="180">
+                            จัดการ
+                        </th>
+
+
+                    </tr>
+
+
+                </thead>
+
+
+
+                <tbody id="products">
+
+
+                    <!-- JS Render -->
+
+
+                </tbody>
+
+
+            </table>
+
+
+        </div>
+
+
+
+    </main>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ========================= -->
+<!-- Product Modal -->
+<!-- ========================= -->
+
+
+<div class="modal"
+    id="productModal">
+
+
+    <div class="modal-content">
+
+
+
+        <span class="close"
+            onclick="closeModal()">
+
+            &times;
+
+        </span>
+
+
+
+
+        <h2 id="modalTitle">
+
+            เพิ่มสินค้า
+
+        </h2>
+
+
+
+
+
+        <input
+            type="hidden"
+            id="productId">
+
+
+
+
+
+        <div class="form-group">
+
+
+            <label>
+                ชื่อสินค้า
+            </label>
+
+
+            <input
+                type="text"
+                id="productName"
+                placeholder="ชื่อสินค้า">
+
+
+        </div>
+
+
+
+
+
+        <div class="form-group">
+
+
+            <label>
+                ราคา
+            </label>
+
+
+            <input
+                type="number"
+                id="productPrice"
+                placeholder="ราคา">
+
+
+        </div>
+
+
+
+
+
+        <div class="form-group">
+
+
+            <label>
+                รูปสินค้า
+            </label>
+
+
+            <input
+                type="file"
+                id="imageFile"
+                accept="image/*">
+
+
+        </div>
+
+
+
+
+
+        <!-- เก็บ URL รูป -->
+
+        <input
+            type="hidden"
+            id="productImage">
+
+
+
+
+
+        <div class="preview-box">
+
+
+            <img
+                id="preview"
+                style="display:none;">
+
+
+        </div>
+
+
+
+
+
+        <button
+            class="save-btn"
+            onclick="saveProduct()">
+
+
+            💾 บันทึก
+
+
+        </button>
+
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ========================= -->
+<!-- Crop Modal -->
+<!-- ========================= -->
+
+
+<div class="crop-modal"
+    id="cropModal">
+
+
+
+    <div class="crop-content">
+
+
+
+        <h2>
+            ครอปรูปสินค้า
+        </h2>
+
+
+
+
+        <img
+            id="cropImage">
+
+
+
+
+
+        <div class="crop-buttons">
+
+
+            <button
+                id="cropCancel"
+                type="button">
+
+                ยกเลิก
+
+            </button>
+
+
+
+            <button
+                id="cropSave"
+                type="button">
+
+
+                ใช้รูปนี้
+
+
+            </button>
+
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- Cropper -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.js"></script>
+
+
+<!-- Product JS -->
+
+<script src="js/products.js"></script>
+
+
+
+</body>
+
+</html>

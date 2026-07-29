@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>ยืนยันการสั่งซื้อ | THE ONE Bakery</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/checkout.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+
+    <header class="page-header">
+
+        <h1>
+
+            ✅ ยืนยันการสั่งซื้อ
+
+        </h1>
+
+        <p>
+
+            กรุณากรอกข้อมูลสำหรับรับสินค้า
+
+        </p>
+
+    </header>
+
+    <!-- Order Summary -->
+
+    <section class="summary-box">
+
+        <h2>
+
+            รายการสินค้า
+
+        </h2>
+
+        <div id="orderSummary">
+
+        </div>
+
+        <div class="total">
+
+            รวมทั้งหมด :
+
+            <span id="totalPrice">
+
+                ฿0.00
+
+            </span>
+
+        </div>
+
+    </section>
+
+    <!-- Customer Information -->
+
+    <section class="checkout-form">
+
+        <h2>
+
+            ข้อมูลผู้สั่งซื้อ
+
+        </h2>
+
+        <div class="form-group">
+
+            <label>
+
+                ชื่อ - นามสกุล
+
+            </label>
+
+            <input
+
+                type="text"
+
+                id="customerName"
+
+                placeholder="กรอกชื่อของคุณ">
+
+        </div>
+
+        <div class="form-group">
+
+            <label>
+
+                เบอร์โทรศัพท์
+
+            </label>
+
+            <input
+
+                type="tel"
+
+                id="phone"
+
+                placeholder="08xxxxxxxx">
+
+        </div>
+
+    </section>
+
+    <!-- Buttons -->
+
+    <div class="checkout-actions">
+
+        <button
+
+            class="btn secondary"
+
+            onclick="history.back()">
+
+            ← กลับ
+
+        </button>
+
+        <button
+    type="button"
+    class="btn"
+    onclick="submitOrder()">
+
+    ✅ ยืนยันการสั่งซื้อ
+
+</button>
+
+    </div>
+
+</div>
+
+<script src="js/checkout.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,290 @@
+/* ===========================================================
+   THE ONE Bakery
+   Packing Page
+=========================================================== */
+
+/* ---------- Layout ---------- */
+
+.layout{
+
+    display:flex;
+
+    min-height:100vh;
+
+    background:#F8F5F2;
+
+}
+
+/* ---------- Sidebar ---------- */
+
+.sidebar{
+
+    width:260px;
+
+    background:#5D4037;
+
+    color:white;
+
+    padding:30px 20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.sidebar .logo{
+
+    margin-bottom:15px;
+
+}
+
+.sidebar .logo img{
+
+    width:110px;
+
+    height:auto;
+
+}
+
+.sidebar h2{
+
+    font-size:24px;
+
+    margin-bottom:35px;
+
+    text-align:center;
+
+}
+
+.sidebar nav{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.sidebar nav a{
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:14px 18px;
+
+    border-radius:10px;
+
+    transition:.25s;
+
+    font-size:17px;
+
+}
+
+.sidebar nav a:hover{
+
+    background:rgba(255,255,255,.15);
+
+}
+
+.sidebar nav a.active{
+
+    background:#8D6E63;
+
+}
+
+/* ---------- Content ---------- */
+
+.content{
+
+    flex:1;
+
+    padding:35px;
+
+}
+
+/* ---------- Header ---------- */
+
+.page-header{
+
+    margin-bottom:30px;
+
+}
+
+.page-header h1{
+
+    color:#5D4037;
+
+    font-size:34px;
+
+    margin-bottom:8px;
+
+}
+
+.page-header p{
+
+    color:#777;
+
+    font-size:16px;
+
+}
+
+/* ---------- Orders ---------- */
+
+.packing-orders{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+/* ---------- Order Card ---------- */
+
+.order-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+}
+
+.order-card h2{
+
+    color:#5D4037;
+
+    margin-bottom:15px;
+
+}
+
+.order-info{
+
+    color:#555;
+
+    line-height:1.8;
+
+    margin-bottom:15px;
+
+}
+
+.order-items{
+
+    margin-top:15px;
+
+    padding-top:15px;
+
+    border-top:1px solid #EEE;
+
+}
+
+.order-items h3{
+
+    color:#5D4037;
+
+    margin-bottom:10px;
+
+}
+
+.order-items ul{
+
+    padding-left:20px;
+
+}
+
+.order-items li{
+
+    margin-bottom:8px;
+
+    color:#666;
+
+}
+
+/* ---------- Finish Button ---------- */
+
+.finish-btn{
+
+    width:100%;
+
+    margin-top:20px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#43A047;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.finish-btn:hover{
+
+    background:#2E7D32;
+
+}
+
+/* ---------- Empty ---------- */
+
+.empty{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:60px;
+
+    text-align:center;
+
+    color:#888;
+
+    font-size:20px;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:900px){
+
+    .layout{
+
+        flex-direction:column;
+
+    }
+
+    .sidebar{
+
+        width:100%;
+
+    }
+
+    .content{
+
+        padding:20px;
+
+    }
+
+}

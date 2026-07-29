@@ -1,0 +1,495 @@
+/* ===========================================================
+   THE ONE Bakery
+   Main CSS
+=========================================================== */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
+
+/* ===========================
+   Reset
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Prompt',sans-serif;
+
+    background:#f8f5f1;
+
+    color:#333;
+
+    min-height:100vh;
+
+}
+
+/* ===========================
+   Container
+=========================== */
+
+.container{
+
+    width:95%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+}
+
+/* ===========================
+   Typography
+=========================== */
+
+h1{
+
+    color:#5d4037;
+
+    margin-bottom:15px;
+
+    font-size:34px;
+
+}
+
+h2{
+
+    color:#6d4c41;
+
+    margin-bottom:12px;
+
+}
+
+h3{
+
+    color:#795548;
+
+    margin-bottom:10px;
+
+}
+
+p{
+
+    line-height:1.6;
+
+}
+
+/* ===========================
+   Link
+=========================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* ===========================
+   Button
+=========================== */
+
+button{
+
+    cursor:pointer;
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:12px 20px;
+
+    font-size:15px;
+
+    font-family:'Prompt',sans-serif;
+
+    transition:.25s;
+
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.btn-primary{
+
+    background:#8d6e63;
+
+    color:white;
+
+}
+
+.btn-primary:hover{
+
+    background:#6d4c41;
+
+}
+
+.btn-success{
+
+    background:#43a047;
+
+    color:white;
+
+}
+
+.btn-success:hover{
+
+    background:#2e7d32;
+
+}
+
+.btn-danger{
+
+    background:#e53935;
+
+    color:white;
+
+}
+
+.btn-danger:hover{
+
+    background:#c62828;
+
+}
+
+.btn-warning{
+
+    background:#f9a825;
+
+    color:white;
+
+}
+
+.btn-warning:hover{
+
+    background:#f57f17;
+
+}
+
+/* ===========================
+   Form
+=========================== */
+
+input,
+textarea,
+select{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    font-family:'Prompt',sans-serif;
+
+    outline:none;
+
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+
+    border-color:#8d6e63;
+
+}
+
+/* ===========================
+   Card
+=========================== */
+
+.card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+
+}
+
+/* ===========================
+   Table
+=========================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+thead{
+
+    background:#6d4c41;
+
+    color:white;
+
+}
+
+th{
+
+    padding:14px;
+
+    text-align:left;
+
+}
+
+td{
+
+    padding:14px;
+
+    border-bottom:1px solid #ececec;
+
+}
+
+tbody tr:hover{
+
+    background:#fafafa;
+
+}
+
+/* ===========================
+   Badge
+=========================== */
+
+.badge{
+
+    display:inline-block;
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    color:white;
+
+    font-weight:500;
+
+}
+
+.badge-success{
+
+    background:#43a047;
+
+}
+
+.badge-warning{
+
+    background:#f9a825;
+
+}
+
+.badge-danger{
+
+    background:#e53935;
+
+}
+
+.badge-info{
+
+    background:#1e88e5;
+
+}
+
+/* ===========================
+   Grid
+=========================== */
+
+.grid{
+
+    display:grid;
+
+    gap:20px;
+
+}
+
+/* ===========================
+   Flex
+=========================== */
+
+.flex{
+
+    display:flex;
+
+}
+
+.flex-between{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.flex-center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* ===========================
+   Menu
+=========================== */
+
+.menu{
+
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    margin:25px 0;
+
+}
+
+.menu button{
+
+    background:#8d6e63;
+
+    color:white;
+
+}
+
+.menu button:hover{
+
+    background:#6d4c41;
+
+}
+
+/* ===========================
+   Section
+=========================== */
+
+.section{
+
+    margin-top:35px;
+
+}
+
+/* ===========================
+   HR
+=========================== */
+
+hr{
+
+    border:none;
+
+    border-top:1px solid #e5e5e5;
+
+    margin:20px 0;
+
+}
+
+/* ===========================
+   Image
+=========================== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+
+    margin-top:40px;
+
+    padding:25px;
+
+    text-align:center;
+
+    color:#888;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width:992px){
+
+    .container{
+
+        width:96%;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    h1{
+
+        font-size:28px;
+
+    }
+
+    .menu{
+
+        flex-direction:column;
+
+    }
+
+    .menu button{
+
+        width:100%;
+
+    }
+
+    table{
+
+        font-size:14px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    h1{
+
+        font-size:24px;
+
+    }
+
+    button{
+
+        width:100%;
+
+    }
+
+}

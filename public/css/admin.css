@@ -1,0 +1,448 @@
+/* ===========================================================
+   THE ONE Bakery
+   Admin Page
+=========================================================== */
+
+/* ---------- Layout ---------- */
+
+.layout{
+
+    display:flex;
+
+    min-height:100vh;
+
+    background:#F8F5F2;
+
+}
+
+/* ---------- Sidebar ---------- */
+
+.sidebar{
+
+    width:260px;
+
+    background:#5D4037;
+
+    color:white;
+
+    padding:30px 20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.toolbar{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:30px;
+
+}
+
+.toolbar label{
+
+    font-weight:bold;
+
+    color:#5D4037;
+
+    font-size:17px;
+
+}
+
+.sidebar .logo img{
+
+    width:120px;
+
+    height:120px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:4px solid #FFFFFF;
+
+    background:white;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.25);
+
+}
+
+.sidebar h2{
+
+    font-size:24px;
+
+    margin-bottom:35px;
+
+    text-align:center;
+
+}
+
+.sidebar nav{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.sidebar nav a{
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:14px 18px;
+
+    border-radius:10px;
+
+    transition:.25s;
+
+    font-size:17px;
+
+}
+
+.sidebar nav a:hover{
+
+    background:rgba(255,255,255,.15);
+
+}
+
+.sidebar nav a.active{
+
+    background:#8D6E63;
+
+}
+
+/* ---------- Content ---------- */
+
+.content{
+
+    flex:1;
+
+    padding:35px;
+
+}
+
+/* ---------- Header ---------- */
+
+.page-header{
+
+    margin-bottom:30px;
+
+}
+
+.page-header h1{
+
+    color:#5D4037;
+
+    font-size:34px;
+
+    margin-bottom:8px;
+
+}
+
+.page-header p{
+
+    color:#777;
+
+    font-size:16px;
+
+}
+
+/* ---------- Toolbar ---------- */
+
+.toolbar{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:30px;
+
+}
+
+.toolbar input{
+
+    width:220px;
+
+}
+
+.toolbar input,
+
+.toolbar select{
+
+    padding:14px 16px;
+
+    border:2px solid #D7CCC8;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    outline:none;
+
+    background:white;
+
+    transition:.25s;
+
+}
+
+.toolbar input:focus,
+
+.toolbar select:focus{
+
+    border-color:#8D6E63;
+
+    box-shadow:0 0 8px rgba(141,110,99,.2);
+
+}
+
+/* ---------- Orders ---------- */
+
+.orders{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+/* ---------- Order Card ---------- */
+
+.order-card{
+
+    background:white;
+
+    border-radius:16px;
+
+    padding:22px;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+}
+
+.order-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:15px;
+
+}
+
+.order-header h3{
+
+    color:#5D4037;
+
+    font-size:22px;
+
+}
+
+.order-status{
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    color:white;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+}
+
+/* ---------- Status ---------- */
+
+.status-production{
+
+    background:#FB8C00;
+
+}
+
+.status-packing{
+
+    background:#039BE5;
+
+}
+
+.status-success{
+
+    background:#43A047;
+
+}
+
+/* ---------- Info ---------- */
+
+.order-info{
+
+    color:#555;
+
+    line-height:1.9;
+
+    margin-bottom:18px;
+
+}
+
+/* ---------- Items ---------- */
+
+.order-items{
+
+    border-top:1px solid #EEE;
+
+    padding-top:15px;
+
+}
+
+.order-items h4{
+
+    color:#5D4037;
+
+    margin-bottom:10px;
+
+}
+
+.order-items ul{
+
+    padding-left:20px;
+
+}
+
+.order-items li{
+
+    margin-bottom:6px;
+
+    color:#666;
+
+}
+
+/* ---------- Empty ---------- */
+
+.empty{
+
+    background:white;
+
+    text-align:center;
+
+    padding:60px;
+
+    border-radius:16px;
+
+    color:#888;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:900px){
+
+    .layout{
+
+        flex-direction:column;
+
+    }
+
+    .sidebar{
+
+        width:100%;
+
+    }
+
+    .content{
+
+        padding:20px;
+
+    }
+
+    .toolbar{
+
+        flex-direction:column;
+
+    }
+
+    .order-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:10px;
+
+    }
+
+}
+
+/* ---------- Order Footer ---------- */
+
+.order-footer{
+
+    margin-top:20px;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.order-footer select{
+
+    padding:10px 14px;
+
+    border:2px solid #D7CCC8;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    outline:none;
+
+}
+
+.order-footer button{
+
+    padding:10px 18px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#6D4C41;
+
+    color:white;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.order-footer button:hover{
+
+    background:#4E342E;
+
+}
