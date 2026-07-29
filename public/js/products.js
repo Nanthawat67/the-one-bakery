@@ -232,7 +232,7 @@ function renderProducts(data) {
 
                 >
 
-                    ✏️ แก้ไข
+                    แก้ไข
 
                 </button>
 
@@ -248,7 +248,7 @@ function renderProducts(data) {
 
                 >
 
-                    🗑️ ลบ
+                    ลบ
 
                 </button>
 

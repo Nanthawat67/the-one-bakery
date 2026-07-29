@@ -3,23 +3,36 @@
 // รวมสินค้าที่ต้องผลิต
 // ======================================
 
+
 async function loadKitchen() {
 
     try {
 
-        const response = await fetch("/api/kitchen");
+        const response =
+            await fetch("/api/kitchen");
 
-        const products = await response.json();
+
+        const products =
+            await response.json();
+
+
+        console.log("Kitchen Data:", products);
+
 
         renderKitchen(products);
+
 
     }
 
     catch (err) {
 
+
         console.error(err);
 
-        document.getElementById("kitchenList").innerHTML = `
+
+        document
+        .getElementById("kitchenList")
+        .innerHTML = `
 
             <div class="empty">
 
@@ -29,19 +42,30 @@ async function loadKitchen() {
 
         `;
 
+
     }
 
 }
+
+
 
 // ======================================
 // แสดงรายการผลิต
 // ======================================
 
+
 function renderKitchen(products) {
 
-    const container = document.getElementById("kitchenList");
 
-    if(products.length === 0){
+    const container =
+        document.getElementById(
+            "kitchenList"
+        );
+
+
+
+    if(!products || products.length === 0){
+
 
         container.innerHTML = `
 
@@ -53,29 +77,61 @@ function renderKitchen(products) {
 
         `;
 
+
         return;
+
 
     }
 
+
+
     let html = "";
+
+
 
     products.forEach(product => {
 
+
+
+        // รองรับชื่อ Field หลายแบบ
+        const productName =
+            product.name ||
+            product.product_name ||
+            product.productName ||
+            "ไม่พบชื่อสินค้า";
+
+
+
+        // รองรับจำนวนหลายแบบ
+        const quantity =
+            product.total_quantity ||
+            product.total ||
+            product.quantity ||
+            0;
+
+
+
         html += `
+
 
         <div class="product-card">
 
+
             <h2>
 
-                ${product.name}
+                ${productName}
 
             </h2>
 
+
+
             <div class="qty">
 
-                ${product.total_quantity}
+                ${quantity}
 
             </div>
+
+
 
             <p>
 
@@ -83,15 +139,25 @@ function renderKitchen(products) {
 
             </p>
 
+
+
         </div>
+
 
         `;
 
+
+
     });
+
+
 
     container.innerHTML = html;
 
+
 }
+
+
 
 // ======================================
 // ผลิตเสร็จทั้งหมด
@@ -99,13 +165,17 @@ function renderKitchen(products) {
 // รอผลิต -> รอแพ็ก
 // ======================================
 
+
 async function finishProduction(){
 
-    const confirmFinish = confirm(
 
-        "ยืนยันว่าผลิตสินค้าทั้งหมดเสร็จแล้ว ?"
 
-    );
+    const confirmFinish =
+        confirm(
+            "ยืนยันว่าผลิตสินค้าทั้งหมดเสร็จแล้ว ?"
+        );
+
+
 
     if(!confirmFinish){
 
@@ -113,47 +183,87 @@ async function finishProduction(){
 
     }
 
-    try{
 
-        const response = await fetch(
 
-            "/api/kitchen/finish",
+    try {
 
-            {
 
-                method:"PUT"
 
-            }
+        const response =
+            await fetch(
 
-        );
+                "/api/kitchen/finish",
 
-        const result = await response.json();
+                {
+
+                    method:"PUT"
+
+                }
+
+            );
+
+
+
+
+
+        const result =
+            await response.json();
+
+
+
+
 
         if(result.success){
 
-            alert("ส่งออเดอร์ไปหน้า Packing แล้ว");
 
-            window.location.href = "packing.html";
+
+            alert(
+                "ส่งออเดอร์ไปหน้า Packing แล้ว"
+            );
+
+
+
+            window.location.href =
+                "packing.html";
+
 
         }
+
 
         else{
 
-            alert(result.message);
+
+            alert(
+                result.message
+            );
+
 
         }
 
+
+
     }
+
 
     catch(err){
 
+
+
         console.error(err);
 
-        alert("เกิดข้อผิดพลาด");
+
+        alert(
+            "เกิดข้อผิดพลาด"
+        );
+
 
     }
 
+
+
 }
+
+
 
 // ======================================
 
