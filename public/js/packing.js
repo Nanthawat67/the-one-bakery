@@ -70,7 +70,7 @@ function renderPacking() {
 
     let html = "";
 
-    packingOrders.forEach(order => {
+    packingOrders.forEach((order, index) => {
 
         let itemsHTML = "";
 
@@ -98,7 +98,7 @@ function renderPacking() {
 
             <h2>
 
-                Order #${order.id}
+                Order #${index + 1}
 
             </h2>
 

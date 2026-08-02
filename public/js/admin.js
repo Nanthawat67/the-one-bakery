@@ -73,7 +73,7 @@ function renderOrders(data) {
 
     let html = "";
 
-    data.forEach(order => {
+    data.forEach((order, index) => {
 
         let itemsHTML = "";
 
@@ -99,7 +99,11 @@ function renderOrders(data) {
 
                 <h3>
 
-                    Order #${order.id}
+                    <h3>
+
+    Order #${index + 1}
+
+</h3>
 
                 </h3>
 
